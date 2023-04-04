@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article Preview Component</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- this container div will be set to have a width of 90% on small screens and max-width of 1440px on large screens -->
+    <div class="container">
+      <main class="card">
+        <!-- screen size greater than 600px will see the featured-image and article-component divs will stay side by side; css will be used to put the featured image on the left, article component on the right -->
+        <div class="featured-image-component">
+          <img src="./images/drawers.jpg" alt="drawers" />
+        </div>
+
+        <div class="article-component">
+          <article>
+            <h2>
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h2>
+
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I've got some simple tips to
+              help you make any room feel comfortable
+            </p>
+          </article>
+
+          <div class="author-component">
+            <div class="author-info">
+              <div class="author-avatar">
+                <img
+                  src="./images/avatar-michelle.jpg"
+                  alt="Michelle Appleton"
+                />
+              </div>
+
+              <div class="author-name-and-publish-date">
+                <h4>Michelle Appleton</h4>
+                <p>28 Jun 2020</p>
+              </div>
+            </div>
+
+            <div class="share">
+              <button>
+                <img src="./images/icon-share.svg" alt="share icon" />
+              </button>
+            </div>
+          </div>
+
+          <div class="active-share-component asc-desktop">
+            <div class="flex">
+              <div>share</div>
+
+              <div class="social-icons">
+                <img src="./images/icon-facebook.svg" alt="facebook icon" />
+                <img src="./images/icon-twitter.svg" alt="twitter icon" />
+                <img src="./images/icon-pinterest.svg" alt="pinterest icon" />
+              </div>
+            </div>
+
+            <div class="active-share-btn asb-desktop">
+              <button>
+                <img src="./images/icon-share.svg" alt="share icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="./app.js"></script>
+  </body>
+</html>

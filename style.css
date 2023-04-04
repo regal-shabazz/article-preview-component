@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: #fff;
+  --font-size: 13px;
+  --font-family: "Manrope", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--light-grayish-blue);
+}
+
+body .container {
+  width: 90%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  /* margin 0 auto centers the div horizontally within the body*/
+
+  /* set container display property to flex, so the 'main .card' can be centered in the middle of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** main > 
+  .featured-image-component, 
+  .article-component 
+**/
+
+main {
+  overflow: hidden;
+  border-radius: 10px;
+  display: grid;
+  box-shadow: 0 0 15px rgb(194, 191, 191);
+
+  position: relative;
+}
+
+.featured-image-component {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.featured-image-component img {
+  width: 100%;
+  display: block;
+}
+
+
+.article-component {
+  background-color: var(--white);
+  padding: 0 2rem;
+  line-height: 1.5;
+  font-size: var(--font-size);
+}
+
+article {
+  padding: 3rem 0 1.5rem;
+}
+
+article > h2 {
+  margin-bottom: 1rem;
+  color: var(--very-dark-grayish-blue);
+}
+
+article > p {
+  color: var(--desaturated-dark-blue);
+}
+
+.author-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+}
+
+.author-avatar {
+  margin-right: 1rem;
+}
+
+.author-avatar > img{
+  overflow: hidden;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.author-name-and-publish-date h4 {
+  color: var(--very-dark-grayish-blue);
+}
+
+.author-name-and-publish-date p {
+  color: var(--desaturated-dark-blue);
+}
+
+.share button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+/* ****** share tab - active ******* */
+
+.active-share-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--very-dark-grayish-blue);
+  position: absolute;
+  width: 100%;
+  top: 86%;
+  left: 0;
+  padding: 1.5rem 2rem 3rem;
+  text-align: center;
+
+  /* display: none; */
+  transition: 1s;
+}
+
+.active-share-component.active {
+  display: block;
+  top: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex > div:nth-child(1) {
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+  margin-right: 1rem;
+  letter-spacing: 8px;
+}
+
+.social-icons > img {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    position: relative;
+  }
+
+  main {
+    grid-template-columns: 0.8fr 1fr;
+    max-width: 700px;
+    position: unset;
+  }
+
+  .featured-image-component {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .featured-image-component img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .asc-desktop {
+    position: absolute;
+    width: unset;
+    left: 67%;
+    top: 52%;
+    padding: 1rem 2rem 1rem;
+    border-radius: 10px;
+    display: none;
+    transition: 1s;
+  }
+
+  .asc-desktop::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--very-dark-grayish-blue);
+    top: 79%;
+    left: 49%;
+    position: absolute;
+    transform: rotate(45deg);
+  }
+
+  .asc-desktop.active {
+    display: block;
+  }
+
+  .asb-desktop {
+    display: none;
+  }
+}
