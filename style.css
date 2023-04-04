@@ -135,7 +135,7 @@ article > p {
   padding: 1.5rem 2rem 3rem;
   text-align: center;
 
-  /* display: none; */
+  display: none;
   transition: 1s;
 }
 
